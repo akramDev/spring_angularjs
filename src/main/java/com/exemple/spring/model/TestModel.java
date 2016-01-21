@@ -1,4 +1,4 @@
-package com.exemple.test.model;
+package com.exemple.spring.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

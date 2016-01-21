@@ -1,10 +1,10 @@
-package com.exemple.test.service;
+package com.exemple.spring.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.exemple.test.model.TestModel;
-import com.exemple.test.repository.TestRepository;
+import com.exemple.spring.model.TestModel;
+import com.exemple.spring.repository.TestRepository;
 
 @Service("testService")
 public class TestService {

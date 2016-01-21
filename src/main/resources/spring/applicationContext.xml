@@ -16,7 +16,7 @@
     http://www.springframework.org/schema/jdbc/spring-jdbc-4.2.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="com.exemple.test" />
+	<context:component-scan base-package="com.exemple.spring" />
 	<context:property-placeholder location="classpath:/jdbc.properties" />
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -34,7 +34,7 @@
 
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
       <property name="dataSource" ref="dataSource" />
-      <property name="packagesToScan" value="com.exemple.test.model" />
+      <property name="packagesToScan" value="com.exemple.spring.model" />
       <property name="jpaVendorAdapter">
          <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
       </property>
@@ -46,6 +46,6 @@
       </property>
    </bean>
 
-	<jpa:repositories base-package="com.exemple.test.repository" />
+	<jpa:repositories base-package="com.exemple.spring.repository" />
 
 </beans>
