@@ -2,6 +2,8 @@ package com.exemple.spring.rest.resource;
 
 import org.springframework.hateoas.ResourceSupport;
 
+import com.exemple.spring.model.BlogEntry;
+
 public class BlogEntryResource extends ResourceSupport {
 	
 	private String title;
@@ -12,6 +14,12 @@ public class BlogEntryResource extends ResourceSupport {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	
+	public BlogEntry toBlogEntry(){
+		BlogEntry blogEntry = new BlogEntry();
+		blogEntry.setTitle(title);
+		return blogEntry;
 	}
 
 }
