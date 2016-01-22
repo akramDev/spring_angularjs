@@ -8,6 +8,10 @@ import com.exemple.spring.core.model.Blog;
 public class BlogList {
 
     private List<Blog> blogs = new ArrayList<Blog>();
+    
+    public BlogList(List resultList) {
+        this.blogs = resultList;
+    }
 
     public List<Blog> getBlogs() {
         return blogs;

@@ -25,11 +25,10 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import com.exemple.spring.core.model.Blog;
 import com.exemple.spring.core.model.BlogEntry;
 import com.exemple.spring.core.service.BlogEntryService;
-import com.exemple.spring.rest.controller.BlogEntryController;
 
 
 public class BlogEntryControllerTest {
-
+   
 	@InjectMocks
     private BlogEntryController controller;
 
