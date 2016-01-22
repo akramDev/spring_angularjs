@@ -1,10 +1,13 @@
-package com.exemple.spring.model;
+package com.exemple.spring.core.model;
+
 
 public class BlogEntry {
 	
 	private Long id;
 	
 	private String title;
+	
+	private Blog blog;
 	
 	public Long getId() {
 		return id;
@@ -20,6 +23,14 @@ public class BlogEntry {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	public Blog getBlog() {
+		return blog;
+	}
+
+	public void setBlog(Blog blog) {
+		this.blog = blog;
 	}
 
 }

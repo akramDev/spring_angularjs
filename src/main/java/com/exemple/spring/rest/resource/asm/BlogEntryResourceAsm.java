@@ -6,7 +6,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 
-import com.exemple.spring.model.BlogEntry;
+import com.exemple.spring.core.model.BlogEntry;
 import com.exemple.spring.rest.controller.BlogEntryController;
 import com.exemple.spring.rest.resource.BlogEntryResource;
 
