@@ -1,4 +1,4 @@
-package com.exemple.controller;
+package com.exemple.spring.rest.controller;
 
 import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.hasItem;
