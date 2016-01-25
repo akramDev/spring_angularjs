@@ -63,7 +63,7 @@ public class AccountController {
         return new ResponseEntity<AccountListResource>(res, HttpStatus.OK);
     }
 
-	@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping(method = RequestMethod.POST , headers = "Accept=application/json")
 	public ResponseEntity<AccountResource> createAccount(
 			@RequestBody AccountResource sentAccount) {
 		try {
