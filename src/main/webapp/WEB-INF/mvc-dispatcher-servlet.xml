@@ -10,7 +10,7 @@
 
 	<context:component-scan base-package="com.exemple.spring.rest" />
 	<mvc:annotation-driven />
-
+	
 	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
