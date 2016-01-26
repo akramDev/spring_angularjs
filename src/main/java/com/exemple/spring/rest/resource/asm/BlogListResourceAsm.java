@@ -6,6 +6,9 @@ import com.exemple.spring.core.service.util.BlogList;
 import com.exemple.spring.rest.controller.BlogController;
 import com.exemple.spring.rest.resource.BlogListResource;
 
+/**
+ * Created by Chris on 7/1/14.
+ */
 public class BlogListResourceAsm extends ResourceAssemblerSupport<BlogList, BlogListResource> {
 
     public BlogListResourceAsm()

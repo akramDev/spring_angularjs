@@ -6,10 +6,20 @@ import com.exemple.spring.core.model.Blog;
 
 
 public class BlogResource extends ResourceSupport {
+	
+	private Long rid;
 
     private String title;
 
-    public String getTitle() {
+    public Long getRid() {
+		return rid;
+	}
+
+	public void setRid(Long rid) {
+		this.rid = rid;
+	}
+
+	public String getTitle() {
         return title;
     }
 

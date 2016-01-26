@@ -8,12 +8,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class AccountResource extends ResourceSupport {
+	
+	private Long rid;
     
 	private String name;
 
     private String password;
 
-    public String getName() {
+    public Long getRid() {
+		return rid;
+	}
+
+	public void setRid(Long rid) {
+		this.rid = rid;
+	}
+
+	public String getName() {
         return name;
     }
 

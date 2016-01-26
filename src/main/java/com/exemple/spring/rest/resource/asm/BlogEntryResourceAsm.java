@@ -1,7 +1,6 @@
 package com.exemple.spring.rest.resource.asm;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
@@ -13,22 +12,23 @@ import com.exemple.spring.rest.resource.BlogEntryResource;
 
 public class BlogEntryResourceAsm extends ResourceAssemblerSupport<BlogEntry, BlogEntryResource> {
 
-	public BlogEntryResourceAsm() {
-		super(BlogEntryController.class, BlogEntryResource.class);
-	}
+    public BlogEntryResourceAsm()
+    {
+        super(BlogEntryController.class, BlogEntryResource.class);
+    }
 
-	@Override
-	public BlogEntryResource toResource(BlogEntry blogEntry) {
-		BlogEntryResource blogEntryResource = new BlogEntryResource();
-		blogEntryResource.setTitle(blogEntry.getTitle());
-		blogEntryResource.setContent(blogEntry.getContent());
-		Link link = linkTo(methodOn(BlogEntryController.class).getBlogEntry(blogEntry.getId())).withSelfRel();
-		 if(blogEntry.getBlog() != null)
-	        {
-			 blogEntryResource.add((linkTo(BlogController.class).slash(blogEntry.getBlog().getId()).withRel("blog")));
-	        }
-		blogEntryResource.add(link);
-		return blogEntryResource;
-	}
-
+    @Override
+    public BlogEntryResource toResource(BlogEntry blogEntry) {
+        BlogEntryResource res = new BlogEntryResource();
+        res.setTitle(blogEntry.getTitle());
+        res.setContent(blogEntry.getContent());
+        res.setRid(blogEntry.getId());
+        Link self = linkTo(BlogEntryController.class).slash(blogEntry.getId()).withSelfRel();
+        res.add(self);
+        if(blogEntry.getBlog() != null)
+        {
+            res.add((linkTo(BlogController.class).slash(blogEntry.getBlog().getId()).withRel("blog")));
+        }
+        return res;
+    }
 }

@@ -12,10 +12,8 @@ import com.exemple.spring.rest.controller.BlogController;
 import com.exemple.spring.rest.resource.BlogEntryListResource;
 import com.exemple.spring.rest.resource.BlogEntryResource;
 
-
 public class BlogEntryListResourceAsm extends ResourceAssemblerSupport<BlogEntryList, BlogEntryListResource> {
-    
-	public BlogEntryListResourceAsm() {
+    public BlogEntryListResourceAsm() {
         super(BlogController.class, BlogEntryListResource.class);
     }
 
